@@ -1,10 +1,10 @@
-# DESIGN PATTERN
+# **DESIGN PATTERN**
 Projeto de estudo de Design Pattern para aplicações Java
 
-## CONCEITO
+## **CONCEITO**
 Design Patterns são soluções generalistas para problemas recorrentes durante o desenvolvimento de um software.
 
-**CATEGORIAS**
+#### **CATEGORIAS**
 - **Criacionais** : resolvem problemas relacionados a criação e instanciação de objetos
     - Factory Method
     - Abstract Factory
@@ -30,3 +30,7 @@ Design Patterns são soluções generalistas para problemas recorrentes durante 
     - Strategy
     - Template Method
     - Visitor
+
+&nbsp;
+## **STRATEGY**
+Padrão de projeto comportamental que permite que você defina uma família de algoritmos, coloque-os em classes separadas e faça os objetos deles intercambiáveis.
