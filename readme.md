@@ -34,3 +34,7 @@ Design Patterns são soluções generalistas para problemas recorrentes durante 
 &nbsp;
 ## **STRATEGY**
 Padrão de projeto comportamental que permite que você defina uma família de algoritmos, coloque-os em classes separadas e faça os objetos deles intercambiáveis.
+
+&nbsp;
+## **CHAIN OF RESPONSIBILITY**
+Padrão de projeto comportamental que permite que você passe solicitações por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou passa adiante para o próximo handler na corrente.
