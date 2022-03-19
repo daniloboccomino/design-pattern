@@ -46,3 +46,7 @@ Padrão de projeto comportamental que define o esqueleto de um algoritmo na supe
 &nbsp;
 ## **STATE**
 Padrão de projeto comportamental que permite que um objeto altere seu comportamento quando seu estado interno muda. Como se o objeto mudasse de classe.
+
+&nbsp;
+## **OBSERVER**
+Padrão de projeto comportamental que permite definir um mecanismo de assinatura para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.

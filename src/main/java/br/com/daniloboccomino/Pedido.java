@@ -2,6 +2,7 @@ package br.com.daniloboccomino;
 
 import br.com.daniloboccomino.status.Status;
 import br.com.daniloboccomino.status.StatusAberto;
+import br.com.daniloboccomino.status.StatusHandler;
 
 import java.math.BigDecimal;
 
@@ -10,17 +11,20 @@ public class Pedido {
     private BigDecimal valor;
     private int quantidadeItens;
     private Status status;
+    private StatusHandler handler;
 
     public Pedido(BigDecimal valor) {
         this.valor = valor;
         this.quantidadeItens = 1;
         this.status = new StatusAberto();
+        this.handler = new StatusHandler();
     }
 
     public Pedido(BigDecimal valor, int quantidadeItens) {
         this.valor = valor;
         this.quantidadeItens = quantidadeItens;
         this.status = new StatusAberto();
+        this.handler = new StatusHandler();
     }
 
     public BigDecimal getValor() {
@@ -45,6 +49,7 @@ public class Pedido {
 
     public void setStatus(Status status) {
         this.status = status;
+        this.handler.notificar(this);
     }
 
     public void abrirChamado() {
@@ -65,6 +70,14 @@ public class Pedido {
 
     public void reabrir() {
         this.status.reabrir(this);
+    }
+
+    public StatusHandler getHandler() {
+        return handler;
+    }
+
+    public void setHandler(StatusHandler handler) {
+        this.handler = handler;
     }
 
 }
