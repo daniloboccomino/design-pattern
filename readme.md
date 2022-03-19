@@ -38,3 +38,7 @@ Padrão de projeto comportamental que permite que você defina uma família de a
 &nbsp;
 ## **CHAIN OF RESPONSIBILITY**
 Padrão de projeto comportamental que permite que você passe solicitações por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou passa adiante para o próximo handler na corrente.
+
+&nbsp;
+## **TEMPLATE METHOD**
+Padrão de projeto comportamental que define o esqueleto de um algoritmo na superclasse mas deixa as subclasses sobrescreverem etapas específicas do algoritmo sem modificar sua estrutura.

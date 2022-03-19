@@ -11,7 +11,12 @@ public class DescontoZero extends Desconto {
     }
 
     @Override
-    public BigDecimal calcular(Pedido pedido) {
+    protected boolean aplicaDesconto(Pedido pedido) {
+        return true;
+    }
+
+    @Override
+    protected BigDecimal aplicarDesconto(Pedido pedido) {
         return BigDecimal.ZERO;
     }
 

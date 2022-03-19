@@ -12,6 +12,14 @@ public abstract class Desconto {
         this.proximo = proximo;
     }
 
-    public abstract BigDecimal calcular(Pedido pedido);
+    public BigDecimal calcular(Pedido pedido) {
+        // Template Method - metodo padrao com as etapas a serem seguidas
+        // implementacao das subclasses define se alguma etapa possui implementacao especifica
+        return aplicaDesconto(pedido) ? aplicarDesconto(pedido) : proximo.calcular(pedido);
+    }
+
+    protected abstract boolean aplicaDesconto(Pedido pedido);
+
+    protected abstract BigDecimal aplicarDesconto(Pedido pedido);
 
 }
