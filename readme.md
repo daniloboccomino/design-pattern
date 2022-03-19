@@ -42,3 +42,7 @@ Padrão de projeto comportamental que permite que você passe solicitações por
 &nbsp;
 ## **TEMPLATE METHOD**
 Padrão de projeto comportamental que define o esqueleto de um algoritmo na superclasse mas deixa as subclasses sobrescreverem etapas específicas do algoritmo sem modificar sua estrutura.
+
+&nbsp;
+## **STATE**
+Padrão de projeto comportamental que permite que um objeto altere seu comportamento quando seu estado interno muda. Como se o objeto mudasse de classe.
