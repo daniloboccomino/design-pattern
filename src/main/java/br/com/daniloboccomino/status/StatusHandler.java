@@ -1,6 +1,6 @@
 package br.com.daniloboccomino.status;
 
-import br.com.daniloboccomino.Pedido;
+import br.com.daniloboccomino.IPedido;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class StatusHandler {
         this.listeners.remove(listener);
     }
 
-    public void notificar(Pedido pedido) {
+    public void notificar(IPedido pedido) {
         this.listeners.forEach(listener -> listener.update(pedido));
     }
 

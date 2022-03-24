@@ -1,6 +1,6 @@
 package br.com.daniloboccomino.desconto;
 
-import br.com.daniloboccomino.Pedido;
+import br.com.daniloboccomino.IPedido;
 
 import java.math.BigDecimal;
 
@@ -11,12 +11,12 @@ public class DescontoZero extends Desconto {
     }
 
     @Override
-    protected boolean aplicaDesconto(Pedido pedido) {
+    protected boolean aplicaDesconto(IPedido pedido) {
         return true;
     }
 
     @Override
-    protected BigDecimal aplicarDesconto(Pedido pedido) {
+    protected BigDecimal aplicarDesconto(IPedido pedido) {
         return BigDecimal.ZERO;
     }
 

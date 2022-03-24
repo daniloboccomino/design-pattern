@@ -8,9 +8,11 @@ import java.math.BigDecimal;
 public class StatusTest {
 
     public static void main(String[] args) {
-        Pedido pedido = new Pedido(new BigDecimal("100"));
+        IPedido pedido = new PedidoProxy(new Pedido(new BigDecimal("100")));
         pedido.getHandler().subscribe(new EmailListener());
         pedido.getHandler().subscribe(new LogListener());
+        System.out.println(pedido.getStatus());
+        System.out.println(pedido.getValor());
         pedido.abrirChamado();
 
         pedido.pagar();
@@ -19,6 +21,7 @@ public class StatusTest {
 
         pedido.entregar();
         System.out.println(pedido.getStatus());
+        System.out.println(pedido.getValor());
         pedido.abrirChamado();
     }
 

@@ -50,3 +50,7 @@ Padrão de projeto comportamental que permite que um objeto altere seu comportam
 &nbsp;
 ## **OBSERVER**
 Padrão de projeto comportamental que permite definir um mecanismo de assinatura para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.
+
+&nbsp;
+## **PROXY**
+Padrão de projeto estrutural que permite que você forneça um substituto ou um espaço reservado para outro objeto. Um proxy controla o acesso ao objeto original, permitindo que você faça algo antes ou depois do pedido chegar ao objeto original.

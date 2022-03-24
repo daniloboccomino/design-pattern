@@ -12,7 +12,7 @@ public class CalculadoraImposto {
         this.imposto = imposto;
     }
 
-    public BigDecimal calcular(Pedido pedido) {
+    public BigDecimal calcular(IPedido pedido) {
         return imposto.calcular(pedido);
     }
 
