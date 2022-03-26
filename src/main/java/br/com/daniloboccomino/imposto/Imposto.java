@@ -4,8 +4,16 @@ import br.com.daniloboccomino.IPedido;
 
 import java.math.BigDecimal;
 
-public interface Imposto {
+public abstract class Imposto {
 
-    public BigDecimal calcular(IPedido pedido);
+    protected Imposto imposto;
+
+    // Decorator - construtor com objeto do mesmo tipo para montar a pilha de objetos/comportamentos
+    public Imposto(Imposto imposto) {
+        super();
+        this.imposto = imposto;
+    }
+
+    public abstract BigDecimal calcular(IPedido pedido);
 
 }

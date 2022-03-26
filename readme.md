@@ -58,3 +58,7 @@ Padrão de projeto estrutural que permite que você forneça um substituto ou um
 &nbsp;
 ## **FACADE**
 Padrão de projeto estrutural que fornece uma interface simplificada para uma biblioteca, um framework, ou qualquer conjunto complexo de classes.
+
+&nbsp;
+## **DECORATOR**
+Padrão de projeto estrutural que permite acoplar novos comportamentos para objetos ao colocá-los dentro de invólucros de objetos que contém os comportamentos.

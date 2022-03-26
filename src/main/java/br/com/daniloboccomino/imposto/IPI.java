@@ -4,11 +4,18 @@ import br.com.daniloboccomino.IPedido;
 
 import java.math.BigDecimal;
 
-public class IPI implements Imposto {
+public class IPI extends Imposto {
+
+    public IPI(Imposto imposto) {
+        super(imposto);
+    }
 
     @Override
     public BigDecimal calcular(IPedido pedido) {
-        return pedido.getValor().multiply(new BigDecimal("0.06"));
+        BigDecimal valorImposto = pedido.getValor().multiply(new BigDecimal("0.06"));
+        // Decorator - verifica se a pilha de objetos/comportamentos possui mais um nivel
+        BigDecimal valorOutroImposto = this.imposto != null ? this.imposto.calcular(pedido) : BigDecimal.ZERO;
+        return valorImposto.add(valorOutroImposto);
     }
 
 }
