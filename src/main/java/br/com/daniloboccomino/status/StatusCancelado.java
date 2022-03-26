@@ -6,6 +6,8 @@ public class StatusCancelado extends Status {
 
     @Override
     public void abrirChamado(IPedido pedido) {
+        // Facade - interface que resolve os servicos complexos que acontecem por de baixo dos panos
+        StatusFacade.abrirChamado();
         System.out.println("Chamado para Comercial");
     }
 
