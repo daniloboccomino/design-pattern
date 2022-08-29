@@ -17,7 +17,7 @@ public class CalculadoraImposto {
     }
 
     public Imposto getImposto() {
-        return imposto;
+        return this.imposto;
     }
 
     public void setImposto(Imposto imposto) {

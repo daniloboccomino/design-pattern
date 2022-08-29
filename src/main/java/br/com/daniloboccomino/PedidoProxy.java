@@ -33,7 +33,7 @@ public class PedidoProxy implements IPedido {
 
     @Override
     public int getQuantidadeItens() {
-        return pedido.getQuantidadeItens();
+        return this.pedido.getQuantidadeItens();
     }
 
     @Override
@@ -43,7 +43,7 @@ public class PedidoProxy implements IPedido {
 
     @Override
     public Status getStatus() {
-        return pedido.getStatus();
+        return this.pedido.getStatus();
     }
 
     @Override
@@ -78,7 +78,7 @@ public class PedidoProxy implements IPedido {
 
     @Override
     public StatusHandler getHandler() {
-        return pedido.getHandler();
+        return this.pedido.getHandler();
     }
 
     @Override

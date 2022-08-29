@@ -10,10 +10,8 @@ public class CalculadoraImpostoTest {
 
     public static void main(String[] args) {
         CalculadoraImposto calculadoraImposto = new CalculadoraImposto(
-                                                new ICMS(
-                                                new ISS(
-                                                new IPI(null
-                                                )))); // Strategy - resolver o problema passando a estrategia a ser usada
+                                                new ICMS(new ISS(new IPI(null) // Decorator - empilhar e acoplar novos comportamentos
+                                                ))); // Strategy - resolver o problema passando a estrategia a ser usada
         IPedido pedido = new PedidoProxy(new Pedido(new BigDecimal("100")));
 
         BigDecimal imposto = calculadoraImposto.calcular(pedido);

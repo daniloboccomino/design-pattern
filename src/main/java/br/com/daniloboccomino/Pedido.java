@@ -35,7 +35,7 @@ public class Pedido implements IPedido {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return valor;
+        return this.valor;
     }
 
     @Override
@@ -45,7 +45,7 @@ public class Pedido implements IPedido {
 
     @Override
     public int getQuantidadeItens() {
-        return quantidadeItens;
+        return this.quantidadeItens;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class Pedido implements IPedido {
 
     @Override
     public Status getStatus() {
-        return status;
+        return this.status;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class Pedido implements IPedido {
 
     @Override
     public StatusHandler getHandler() {
-        return handler;
+        return this.handler;
     }
 
     @Override

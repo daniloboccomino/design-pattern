@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 public class CalculadoraDesconto {
 
     public BigDecimal calcular(IPedido pedido) {
-        // Chain of Responsibility - monta uma cadeia/sequencia de varificacoes passando o proximo elo/etapa
+        // Chain of Responsibility - monta uma cadeia/sequencia de verificacoes passando o proximo elo/etapa
         Desconto cadeiaDeDesconto = new DescontoPorValor(
                                     new DescontoPorQuantidadeItens(
                                     new DescontoZero(

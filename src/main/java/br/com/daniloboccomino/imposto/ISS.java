@@ -11,11 +11,8 @@ public class ISS extends Imposto {
     }
 
     @Override
-    public BigDecimal calcular(IPedido pedido) {
-        BigDecimal valorImposto = pedido.getValor().multiply(new BigDecimal("0.05"));
-        // Decorator - verifica se a pilha de objetos/comportamentos possui mais um nivel
-        BigDecimal valorOutroImposto = this.imposto != null ? this.imposto.calcular(pedido) : BigDecimal.ZERO;
-        return valorImposto.add(valorOutroImposto);
+    protected BigDecimal aplicarImposto(IPedido pedido) {
+        return pedido.getValor().multiply(new BigDecimal("0.05"));
     }
 
 }
